@@ -1,42 +1,53 @@
 .inputForm {
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
+  /* height: 100px; */
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  grid-gap: 15px;
+  padding: 10px 12px 10px 20px;
   align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-bottom: 1px solid rgb(235 227 227);
 }
 
 .inputForm > input,
 button {
   outline: none;
   border: none;
-  font-size: 1.4rem;
+  font-size: 16px;
   color: #000;
 }
 
 .inputForm > input {
   height: 5vh;
-  width: 80%;
+  width: 100%;
   max-width: 900px; /* Set the maximum width */
   margin: 0 auto; /* Center the container */
-  box-shadow: 1px 1px 6px -2px #000;
-  background: #f3f8ff;
+  /* box-shadow: 1px 1px 6px -2px #000; */
+  /* background: #f3f8ff; */
   font-family: "Poppins", sans-serif;
-  text-align: center;
-  border-radius: 50px;
+  /* text-align: center; */
+  border-radius: 10px;
 }
 .inputForm > input::placeholder {
-  font-size: 18px;
-  color: rgba(229, 229, 229, 0.907);
+  font-size: 16px;
+  color: black;
+  font-family: "Roboto", sans-serif;
 }
 
 .inputForm > button {
   font-family: "Roboto", sans-serif;
   padding: 5px 10px;
-  background: #ffb534;
+  background: #8178e3;
   cursor: pointer;
   font-weight: 500;
-  border-radius: 5px;
-  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 48px;
+  color: white;
+}
+
+.add-todo {
+  margin: 0;
 }

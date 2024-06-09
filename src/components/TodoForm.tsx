@@ -24,9 +24,11 @@ const TodoForm: React.FC<PropTypes> = ({ setTodos }) => {
         value={newTodoText}
         onChange={(e) => setNewTodoText(e.target.value)}
         autoFocus={true}
-        placeholder="Add a Task"
+        placeholder="Start typing here..."
       />
-      <button onClick={handleAddTodo}>Add Todo</button>
+      <button className="add-todo" onClick={handleAddTodo}>
+        Create
+      </button>
     </div>
   );
 };

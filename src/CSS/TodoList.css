@@ -2,6 +2,10 @@
   width: 100%;
   max-width: 900px; /* Set the maximum width */
   margin: 0 auto;
+  border-radius: 15px;
+  position: absolute;
+  top: 16rem;
+  left: 5%;
 }
 
 .todos {
@@ -9,36 +13,41 @@
   font-weight: 500;
   max-height: 500px;
   overflow-y: auto;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: white;
+  border-radius: 10px;
 }
 
 .items {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 0fr;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 1px 1px 4px -2px blue;
   margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
+  padding: 5px 10px;
+  gap: 5px;
+  border-bottom: 1px solid #c7c5c788;
+  height: 4rem;
 }
 
-.items:hover {
+/* .items:hover {
   box-shadow: 1px 1px 6px -1px rgb(128, 255, 0);
   cursor: pointer;
-}
+} */
 
 .editText {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 0fr 0fr;
   align-items: center;
-  justify-content: center;
 }
 .editText > button {
   margin: 0 5px;
   display: flex;
 }
 .editText > button:nth-child(2) {
-  color: #a1eebd;
+  color: #41c973;
 }
 .editText > button:nth-child(3) {
   color: #ef4040;
@@ -46,11 +55,10 @@
 
 .editText > input {
   border: none;
-  border-radius: 50px;
+  border-radius: 15px;
   background: transparent;
   padding: 10px;
-  box-shadow: 1px 1px 5px -2px red;
-  margin: 0 10px;
+  font-size: 16px;
 }
 
 button {
@@ -66,6 +74,7 @@ button {
   margin: 10px;
 }
 .editBtn > span {
+  font-size: 16px;
   display: flex;
   align-items: center;
   margin-right: 10px;
@@ -76,14 +85,78 @@ button {
 
 /* Scrollbar styles */
 .todos::-webkit-scrollbar {
-  width: 12px; /* Set the width of the scrollbar */
+  width: 8px; /* Set the width of the scrollbar */
 }
 
 .todos::-webkit-scrollbar-thumb {
-  background-color: #888; /* Set the color of the thumb */
+  background-color: #b2afaf; /* Set the color of the thumb */
   border-radius: 6px; /* Set the border radius of the thumb */
 }
 
 .todos::-webkit-scrollbar-track {
   background-color: #eee; /* Set the color of the track */
+}
+
+.inputForm > input,
+button {
+  color: #5a39a5;
+}
+
+.fa-edit-btn {
+  position: relative;
+  border: 1px solid #5a39a5;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.fa-edit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.fa-delete-btn {
+  position: relative;
+  border: 1px solid #c8364c;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.fa-delete {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+}
+
+.fa-check-btn {
+  position: relative;
+  border: 1px solid #36c843;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.fa-check {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  font-weight: 600;
+}
+
+.fa-cancel-btn {
+  position: relative;
+  border: 1px solid #c8364c;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.fa-cancel {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: 600;
+  font-size: 18px;
 }

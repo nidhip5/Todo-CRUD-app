@@ -5,7 +5,9 @@ import { FaEdit, FaCheck } from "react-icons/fa";
 import { GiCancel } from "react-icons/gi";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import TodoForm from "./TodoForm";
+import { RxCross2 } from "react-icons/rx";
 import "../CSS/TodoList.css";
+
 const TodoList = () => {
   const [todos, setTodos] = useState<TodoTypes[]>(TodoService.getTodos);
   const [editingTodoId, setEditingTodoId] = useState<number | null>(null);
@@ -45,9 +47,9 @@ const TodoList = () => {
 
   return (
     <div className="todoContainer">
-      <div>
-        <TodoForm setTodos={setTodos} />
-      </div>
+      {/* <div> */}
+      <TodoForm setTodos={setTodos} />
+      {/* </div> */}
       <div className="todos">
         {todos.map((todo) => (
           <div className="items" key={todo.id}>
@@ -59,24 +61,36 @@ const TodoList = () => {
                   onChange={(e) => setEditedTodoText(e.target.value)}
                   autoFocus={true}
                 />
-                <button onClick={() => handleEditSave(todo.id)}>
-                  <FaCheck />
+                <button
+                  onClick={() => handleEditSave(todo.id)}
+                  className="fa-check-btn"
+                >
+                  <FaCheck className="fa-check" />
                 </button>
-                <button onClick={() => handleEditCancel()}>
-                  <GiCancel />
+                <button
+                  onClick={() => handleEditCancel()}
+                  className="fa-cancel-btn"
+                >
+                  <RxCross2 className="fa-cancel" />
                 </button>
               </div>
             ) : (
               <div className="editBtn">
                 <span>{todo.text}</span>
-                <button onClick={() => handleEditStart(todo.id, todo.text)}>
-                  <FaEdit />
+                <button
+                  onClick={() => handleEditStart(todo.id, todo.text)}
+                  className="fa-edit-btn"
+                >
+                  <FaEdit className="fa-edit" />
                 </button>
               </div>
             )}
 
-            <button onClick={() => handleDeleteTodo(todo.id)}>
-              <RiDeleteBin5Fill />
+            <button
+              onClick={() => handleDeleteTodo(todo.id)}
+              className="fa-delete-btn"
+            >
+              <RiDeleteBin5Fill className="fa-delete" />
             </button>
           </div>
         ))}
