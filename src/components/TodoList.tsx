@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import TodoTypes from "../todo";
-import TodoService from "../TodoService";
-import { FaEdit, FaCheck } from "react-icons/fa";
-import { GiCancel } from "react-icons/gi";
+import { useEffect, useState } from "react";
+import { FaCheck, FaEdit } from "react-icons/fa";
 import { RiDeleteBin5Fill } from "react-icons/ri";
-import TodoForm from "./TodoForm";
 import { RxCross2 } from "react-icons/rx";
 import "../CSS/TodoList.css";
+import TodoTypes from "../todo";
+import TodoService from "../TodoService";
+import TodoForm from "./TodoForm";
 
 const TodoList = () => {
   const [todos, setTodos] = useState<TodoTypes[]>(TodoService.getTodos);
@@ -47,9 +46,7 @@ const TodoList = () => {
 
   return (
     <div className="todoContainer">
-      {/* <div> */}
       <TodoForm setTodos={setTodos} />
-      {/* </div> */}
       <div className="todos">
         {todos.map((todo) => (
           <div className="items" key={todo.id}>

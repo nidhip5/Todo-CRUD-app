@@ -26,18 +26,15 @@ button {
   margin: 0 auto; /* Center the container */
   /* box-shadow: 1px 1px 6px -2px #000; */
   /* background: #f3f8ff; */
-  font-family: "Poppins", sans-serif;
   /* text-align: center; */
   border-radius: 10px;
 }
 .inputForm > input::placeholder {
   font-size: 16px;
   color: black;
-  font-family: "Roboto", sans-serif;
 }
 
 .inputForm > button {
-  font-family: "Roboto", sans-serif;
   padding: 5px 10px;
   background: #8178e3;
   cursor: pointer;
