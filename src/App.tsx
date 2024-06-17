@@ -4,7 +4,7 @@ import "./CSS/App.css";
 
 function App() {
   return (
-    <div className="main">
+    <div className="main animation-start animation0">
       <div className="main-class">
         <p className="name">TODO</p>
       </div>

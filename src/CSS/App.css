@@ -92,3 +92,23 @@
 input:focus {
   outline: none;
 }
+
+.animation-start,
+.animation0 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animation0 {
+  animation-name: example;
+  animation-delay: 0.5s;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
