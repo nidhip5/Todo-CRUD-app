@@ -112,3 +112,32 @@ input:focus {
     opacity: 1;
   }
 }
+
+
+@media (max-width: 600px) {
+  .main {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    border-radius: 0px;  
+  }
+  .main-class {
+    border-radius: 0px;
+  }
+  .name {
+    left: 3rem;
+    font-size: 20px;
+  }
+  .header {
+    left: 11%;
+    width: 80%;
+  }
+  .todoContainer {
+    width: calc(100vw - 32px);
+    left: 4%;
+    max-width: auto;
+  }
+  .inputForm {
+    padding: 6px 7px 6px 14px;
+  }
+}
